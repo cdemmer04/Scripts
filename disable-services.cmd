@@ -1,9 +1,3 @@
-::
-::	Saxion University of Applied Sciences | HBO-ICT
-::	Virtual Machine services stopper and disabler version 1.0 
-:: 
-::	Services stop 
-::
 @ECHO OFF
 @CLS
 @ECHO "Services stop"
@@ -43,10 +37,4 @@ sc config "defragsvc" start=disabled
 sc config "audiosrv" start=disabled
 sc config "browser" start=disabled
 sc config "Wsearch" start=disabled
-::
-::
-::	shutdown /r /c "services disabled"
-::
-::
-
 
