@@ -1,5 +1,5 @@
 #!/bin/bash
-# Chiel Demmer
+# Creator: Chiel Demmer
 
 # Install prerequisites
 sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
