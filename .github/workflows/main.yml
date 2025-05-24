@@ -1,4 +1,4 @@
-name: Deploy naar productieserver
+name: Deploy naar content.chieldemmer.nl
 
 on:
   workflow_dispatch:
