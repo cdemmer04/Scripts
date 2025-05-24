@@ -32,8 +32,8 @@ Set-Service -Name "defragsvc" -StartupType Disabled
 Stop-Service -Name "audiosrv"
 Set-Service -Name "audiosrv" -StartupType Disabled
 
-Stop-Service -Name "browser"
-Set-Service -Name "browser" -StartupType Disabled
+# Stop-Service -Name "browser"
+# Set-Service -Name "browser" -StartupType Disabled
 
 # Windows Search
 Stop-Service -Name "WSearch"
