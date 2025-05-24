@@ -1,0 +1,12 @@
+network:
+  version: 2
+  ethernets:
+    ens33:
+      addresses:
+      - [ENTER VALUE]
+      nameservers:
+        addresses:
+        - [ENTER VALUE]
+      routes:
+      - to: default
+        via: [ENTER VALUE]
