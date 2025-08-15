@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "route": "/test",
+      "methods": [
+        "get"
+      ],
+      "redirect": "content.chieldemmer.nl",
+      "statusCode": 301
+    }
+  ]
+}
