@@ -908,6 +908,9 @@ case $os_type in
         ;;
 esac
 
-# added the actual install command....
+# Added the actual install command....
+msg info "Running apt update..."
 apt update
+
+msg info "Starting installation"
 apt install mariadb-server -y
