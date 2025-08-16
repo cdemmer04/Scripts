@@ -907,3 +907,7 @@ case $os_type in
         error "Sorry, your OS is not supported." "$supported"
         ;;
 esac
+
+# added the actual install command....
+apt update
+apt install mariadb-server -y
