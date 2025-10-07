@@ -13,7 +13,7 @@
       <li>
         <div class="line-content">
         <a href="install-adds.ps1">install-adds.ps1</a> Install Active Directory Domain Services
-        <button class="copy-btn" data-copy="install-adds.ps1">Copy</button>
+        <button class="copy-btn" data-copy="https://r.chieldemmer.nl/install-adds.ps1">Copy</button>
         </div>
       </li>
       <li>
@@ -63,16 +63,17 @@
   </main>
 
   <script>
-    const copyButtons = document.querySelectorAll('.copy-btn');
-    copyButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const textToCopy = btn.getAttribute('data-copy');
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          btn.textContent = 'Copied!';
-          setTimeout(() => btn.textContent = 'Copy', 1000);
-        }).catch(err => console.error('Failed to copy:', err));
-      });
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const link = btn.previousElementSibling; // het <a> element vlak voor de knop
+    const url = link.href; // of link.textContent als je de bestandsnaam wil kopiëren
+    navigator.clipboard.writeText(url).then(() => {
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy', 1000);
     });
+  });
+});
+
   </script>
 </body>
 </html>
