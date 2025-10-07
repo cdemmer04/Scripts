@@ -27,8 +27,17 @@ h1 {
 }
 
 .script-list li {
+  display: grid;
+  grid-template-columns: 1fr 80px; /* 1fr = tekst, 80px = knop */
+  align-items: center;
   margin: 1rem 0;
   font-size: 1.1rem;
+}
+
+.copy-btn {
+  justify-self: end; /* knop rechts uitlijnen */
+  padding: 2px 6px;
+  cursor: pointer;
 }
 
 .script-list a {
@@ -36,11 +45,6 @@ h1 {
   text-decoration: none;
   font-weight: 500;
 }
-
-.copy-btn {
-      padding: 2px 6px;
-      cursor: pointer;
-    }
 
 .script-list a:hover {
   text-decoration: underline;
@@ -52,15 +56,4 @@ footer {
   color: #999;
   text-align: right;
 }
-  
-/* .script-list {
-      list-style: none;
-      padding: 0;
-    }
-    .script-list li {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    } */
     
