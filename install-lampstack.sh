@@ -16,3 +16,4 @@ apt install "php$phpVersion-fpm" -y
 
 # Install mariadb
 wget "$scriptUrl/$mariadbInstallScript" 
+# bash install-mariadb.sh
