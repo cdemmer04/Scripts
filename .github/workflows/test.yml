@@ -3,15 +3,15 @@ on: push
 jobs:
   deploy:
     runs-on: self-hosted
-    environment: poc
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Deploy to all webservers
         run: |
-          IFS=',' read -r -a WEB_SERVERS <<< "${{ vars.WEB_SERVERS }}"
-          for SERVER in "${WEB_SERVERS[@]}"; do
-            echo "Deploying to $SERVER"
+          base=20
+          for i in $(seq 1 2);
+            do
+              host=$(( $base + $i ))
+              echo "10.0.0.$host";
           done
-          ssh web-01 "hostname"
