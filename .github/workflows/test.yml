@@ -14,5 +14,5 @@ jobs:
             do
               host=$(( $base + $i ))
               echo "10.0.0.$host"
-              ssh -i ~/.ssh/id_webdeploy "10.0.0.$host" "hostname"
+              ssh -i ~/.ssh/id_webdeploy "webdeploy@10.0.0.$host" "hostname"
           done
