@@ -8,11 +8,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy to all webservers
+        shell: bash
         run: |
           base=20
-          for i in $(seq 1 1);
-            do
-              host=$(( $base + $i ))
-              echo "10.0.0.$host"
-              ssh -i ~/.ssh/id_webdeploy "webdeploy@10.0.0.$host" "hostname"
+          end=254
+
+          for i in $(seq $base $end); do
+              (
+                  ssh -o ConnectTimeout=5 -i ~/.ssh/id_webdeploy "webdeploy@10.0.0.$i" "hostname" \
+                      && echo "10.0.0.$i succeeded" \
+                      || echo "10.0.0.$i failed"
+              ) &
           done
+          wait
