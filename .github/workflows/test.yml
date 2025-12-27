@@ -14,3 +14,4 @@ jobs:
           for SERVER in "${WEB_SERVERS[@]}"; do
             echo "Deploying to $SERVER"
           done
+          ssh web-01 "hostname"
