@@ -28,4 +28,4 @@ jobs:
       - name: Deploy loadbalancer configuration
         shell: bash
         run: |
-          cp ./webservers /web/scripts/webservers
+          cp .config/webservers /web/scripts/webservers
