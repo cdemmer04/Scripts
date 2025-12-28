@@ -1,0 +1,2 @@
+# Webservers to add to loadbalancer upstream group
+server web-01;

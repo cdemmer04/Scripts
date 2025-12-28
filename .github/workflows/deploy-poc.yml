@@ -1,7 +1,7 @@
 on: push
 
 jobs:
-  deploy:
+  deploy-web:
     runs-on: self-hosted
     steps:
       - name: Checkout code
@@ -21,3 +21,11 @@ jobs:
               ) &
           done
           wait
+  
+  deploy-lb:
+    runs-on: self-hosted
+    steps:
+      - name: Deploy loadbalancer configuration
+        shell: bash
+        run: |
+          cp ./webservers /web/scripts/webservers
